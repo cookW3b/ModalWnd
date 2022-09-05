@@ -1,0 +1,145 @@
+*, *::after, *::before{
+	box-sizing: border-box;
+}
+
+/* ---------------------------------------- */
+
+
+body{
+	background: rgb(51,19,19);
+	background: -moz-linear-gradient(52deg, rgba(51,19,19,1) 0%, rgba(39,41,56,1) 50%, rgba(66,54,18,1) 100%);
+	background: -webkit-linear-gradient(52deg, rgba(51,19,19,1) 0%, rgba(39,41,56,1) 50%, rgba(66,54,18,1) 100%);
+	background: linear-gradient(52deg, rgba(51,19,19,1) 0%, rgba(39,41,56,1) 50%, rgba(66,54,18,1) 100%);
+	overflow: hidden;
+
+}
+
+.container{
+	height: 100vh;
+	position: relative;
+}
+
+.block__imgs{
+	display: flex;
+
+	margin-left: 50px;
+}
+
+.img__items img{
+	width: 300px;
+	height: 200px;
+
+	transition: transform .2s ease-in, margin-bottom .2s ease-in, opacity .2s ease-in;
+
+
+	border-radius: 30px;
+
+	margin-right: 50px;
+	margin-top: 30px;
+}
+
+.img__items{
+	display: flex;
+	flex-direction: column;
+
+}
+
+.img__items span{
+	font-size: 18px;
+
+	color: antiquewhite;
+
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+	margin-top: 15px;
+	margin-left: 15px;
+
+	transition: color .2s ease-in;
+}
+
+.img__items span:hover{
+	color: darkgray;
+	cursor: default;
+}
+
+.img__items img:hover{
+	opacity: .4;
+	cursor: pointer;
+	
+	transform: scale(1.1);
+	margin-bottom: 10px;
+}
+
+.modal__window{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding-top: 100px;
+
+	transition: display 2s ease-in;
+
+	background-color: rgba(0,0,0,0.8); 
+
+	text-align: center;
+}
+
+.modal__window img{
+	width: 700px;
+	height: 450px;
+	margin: auto;
+	display: block;
+
+	border-radius: 30px;
+}
+
+.modal__window span.text{
+	font-size: 18px;
+
+	color: antiquewhite;
+
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	display: inline-block;
+	padding-top: 20px;
+
+}
+
+.close{
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	width: 70px;
+	height: 70px;
+
+
+	color: white;
+	
+	cursor: pointer;
+
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 40px;
+	font-weight: 700;
+	transition: transform .5s ease-in, opacity .5s ease-in;
+
+	
+	background-color: transparent;
+}
+
+.close:hover{
+	transform: rotate(360deg);
+	opacity: .6;
+}
+
+.modal__img, .text{
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@keyframes zoom{
+	from {transform: scale(0)}
+	to {transform: scale(1)}
+}
