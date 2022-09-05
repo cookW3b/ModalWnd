@@ -1,4 +1,4 @@
-It's my little script for working with modal window.
+It's my little script (without libraries and frameworks) for working with modal window.
 
 He look like this:
 
